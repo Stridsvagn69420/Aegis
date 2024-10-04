@@ -5,7 +5,7 @@ This project has two main goals:
 - a DNS server, being a sort-of combination of BIND/Unbound and Pi-Hole/AdGuard DNS, that features blacklists and encrypted DNS
 - a Linux/Unix stub resolver, similar to systemd-resolved, that does standard and encrypted DNS lookups
 
-They're packed into a single project, because a recursive DNS server needs to have some kind of resolution implemented anyway.
+They're packed into a single project, because a recursive DNS server needs to have some kind of resolution implemented anyway. So it's a single application where switching between a standalone DNS server and stub resolver for Linux is just a matter of configuration.
 
 ## DNS-Server
 A simple overview of what Aegis will listen on and how it will be composed:
