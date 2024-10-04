@@ -10,13 +10,13 @@ They're packed into a single project, because a recursive DNS server needs to ha
 ## DNS-Server
 A simple overview of what Aegis will listen on and how it will be composed:
 
-| Service | Protocols | Port |
-| ------- | --------- | ---- |
-| DNS | DNS + UDP/TCP | 53/udp + 53/tcp |
-| DNS over TLS | DNS + TLS + TCP | 853/tcp |
-| DNS over HTTPS | HTTP/2 + TLS + TCP | 443/tcp |
-| DNS over QUIC | DNS + QUIC | 853/udp |
-| DNS over HTTPS3 | HTTP/2 + QUIC | 443/udp |
+| Service | Protocols | Port | RFC |
+| ------- | --------- | ---- | --- |
+| DNS | DNS + UDP/TCP | 53/udp + 53/tcp | RFC 1035 |
+| DNS over TLS | DNS + TLS + TCP | 853/tcp | RFC 7858 |
+| DNS over HTTPS | HTTP/2 + TLS + TCP | 443/tcp | RFC 8484 |
+| DNS over QUIC | DNS + QUIC | 853/udp | RFC 9250 |
+| DNS over HTTPS3 | HTTP/2 + QUIC | 443/udp | - |
 
 If you want to host a HTTPS server alongside, you need to use something like nginx, so that at least the `/dns-query`-path will be available.
 An nginx config snippet will be available as soon as development is finished.
